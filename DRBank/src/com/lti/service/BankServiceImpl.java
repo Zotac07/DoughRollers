@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.lti.dao.BankDao;
+import com.lti.model.Banker_Info;
 import com.lti.model.Internet_banking;
 @Service
 public class BankServiceImpl implements BankService {
@@ -22,6 +23,16 @@ public class BankServiceImpl implements BankService {
 			}
 		}
 		return false;
+	}
+
+	public boolean readAdminLogin(String email, String password) {
+		List<Banker_Info> userlist=dao.AdminLogin(email, password);
+			if(userlist==null)
+			{
+				return false;
+			}
+	
+		return true;
 	}
 
 }

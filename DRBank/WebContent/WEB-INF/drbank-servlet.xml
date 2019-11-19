@@ -24,7 +24,7 @@ http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 	</bean> -->
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource" scope="singleton">
 		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
-		<property name="url" value="jdbc:oracle:thin:@localhost:1521:XE"/>
+		<property name="url" value="jdbc:oracle:thin:@192.168.101.57:1521:XE"/>
 		<property name="username" value="dr"/>
 		<property name="password" value="dr"/>
 	</bean>

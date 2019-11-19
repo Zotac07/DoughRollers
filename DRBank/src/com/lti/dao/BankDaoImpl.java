@@ -8,6 +8,7 @@ import javax.persistence.TypedQuery;
 
 import org.springframework.stereotype.Repository;
 
+import com.lti.model.Banker_Info;
 import com.lti.model.Internet_banking;
 
 @Repository
@@ -22,6 +23,16 @@ public class BankDaoImpl implements BankDao {
 		tquery.setParameter("u", username);
 		tquery.setParameter("p", password);
 		List<Internet_banking> userlist = tquery.getResultList();
+		return userlist;
+	}
+
+
+
+	public List<Banker_Info> AdminLogin(String username, String password) {
+		TypedQuery<Banker_Info> tquery= entityManager.createQuery("Select b From Banker_Info b where b.banker_email=:u AND b.banker_password=:p",Banker_Info.class);
+		tquery.setParameter("u", username);
+		tquery.setParameter("p", password);
+		List<Banker_Info> userlist = tquery.getResultList();
 		return userlist;
 	}
 	

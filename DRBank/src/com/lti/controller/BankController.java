@@ -38,4 +38,17 @@ public class BankController {
 		response.setCharacterEncoding("UTF-8");
 		return "Invalid Credentials";
 	}
+	@RequestMapping(path = "/AdminLoginPage")
+	public String AdminloginPage() {
+		return "AdminLogin";
+	}
+
+	@RequestMapping(path="Adminlogin", method = RequestMethod.POST)
+	public String AdminLogin(@RequestParam("email") String email, @RequestParam("password") String password){
+		boolean result= service.readAdminLogin(email,password);
+		if (result) {
+			return "userdashboard";
+		}
+		return "redirect: wrong.do";
+	}
 }
