@@ -7,6 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<a href="loginpage">Login User</a>
+<a href="registeruser">Register User</a>
+<a href="">Create Account</a>
+<a href="Admin">Admin Login</a>
 </body>
 </html>

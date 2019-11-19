@@ -19,7 +19,7 @@
 					</div>
 					
 					<div class="card-body">
-						<form action="login" method="post">
+						<form action="login.do" method="post">
 							<div class="form-group">
 								<label>User Id</label>
 								<input  type="text" placeholder="User Id" name="username" class="form-control" required>

@@ -23,5 +23,10 @@ public class BankServiceImpl implements BankService {
 		}
 		return false;
 	}
+	@Override
+	public void CreateUserIb(String username,double accno, String password, int pin) {
+		// TODO Auto-generated method stub
+		
+	}
 
 }
