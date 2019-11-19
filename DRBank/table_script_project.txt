@@ -1,0 +1,48 @@
+CREATE TABLE admin(
+username varchar2(30),
+password varchar2(30)
+)
+
+CREATE TABLE user(
+username varchar2(30),
+password varchar2(30),
+first_name varchar2(30),
+middle_name varchar2(30),
+last_name varchar2(30),
+e_mail varchar2(30),
+contact_no number(10),
+date_of_birth date 
+)
+
+
+CREATE TABLE ngo_details(
+username varchar2(30) FOREIGN KEY,
+organization_name varchar2(30),
+owner varchar2(10),
+state varchar2(10),
+city varchar2(10),
+zip_code number(10),
+address varchar2(30),
+website varchar2(30),
+staff number(5),
+hostel_id varchar2(10) FOREIGN KEY,
+memorandum_of_association blob,
+Approval_status varchar2(10)
+)
+
+CREATE TABLE woman_details(
+username varchar2(30) FOREIGN KEY,
+first_name varchar2(30),
+middle_name varchar2(30),
+last_name varchar2(30),
+aadhar_card varchar2(30),
+pan_card varchar2(30),
+date_of_birth date,
+marital_status varchar2(10),
+gender varchar2(10),
+caste varchar2(10),
+category varchar2(10),
+state varchar2(10),
+district varchar2(10),
+address varchar2(30),
+zipcode number(10),
